@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS BOX</title>
+    <style>
+      body {
+        border: 1px solid blue;
+        margin: 10px;
+      }
+      h1 {
+        border: 1px solid black;
+        margin: 0;
+      }
+
+      .container {
+        font-size: 10px;
+        /* 단축속성  */
+        margin: 100px;
+        margin: 50px; /*상하좌우*/
+        margin: 20px 10px; /*상하 20, 좌우 10*/
+        margin: 10px 30px 20px; /*상10 좌우 30 하 20 */
+        margin: 10px 20px 30px 40px;
+
+        /* 개별속성 */
+        margin-left: 10px;
+      }
+
+      .box {
+        /* display값 : block, inline, inline-block, flex */
+        /*블록레벨요소 기본값은 부모만큼*/
+
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        background-color: red;
+        font-size: 1rem;
+        box-sizing: border-box;
+
+        padding: 20px;
+      }
+
+      /*inlie-block은 형태(블록)를 글자처럼 인식한다*/
+
+      span {
+        display: inline-block;
+        /* display: none; */
+        width: 50px;
+        height: 50px;
+        background-color: royalblue;
+        /* 위아래 폰트 사이즈 지정에 대해서 궁금함 */
+        font-size: 1rem;
+
+        border: 3px solid black;
+        border-color: red;
+        border-radius: 50px; /*모서리를 둥글게 처리*/
+        border-top-left-radius: 10px; /*개별*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 박스</h1>
+    <div class="container">
+      <div class="box">블록</div>
+      <span>인라인</span>
+    </div>
+  </body>
+</html>

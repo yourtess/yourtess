@@ -1,0 +1,57 @@
+:root {
+  /* font-size: 30px; */
+}
+
+.size {
+  font-size: 24px;
+}
+.size p {
+  font-size: 0.5rem;
+}
+
+.weight h3 {
+  font-weight: 600;
+  font-weight: normal;
+}
+
+.align {
+  text-align: justify;
+}
+
+.height {
+  line-height: 30px;
+}
+
+.spacing {
+  word-spacing: 3px;
+  letter-spacing: -0.04em;
+}
+
+.transform h3 {
+  text-transform: capitalize;
+}
+
+.decoration {
+  text-decoration: 4px coral underline;
+  text-decoration-style: dotted; /*선의 종류*/
+  text-decoration-color: darkorchid; /*선의 색상*/
+  text-decoration-line: overline; /*선의 위치*/
+
+  text: decoration thickness 5px; /*선의 두께. 표준 아님*/
+
+  text-decoration: underline 5px;
+
+  color: red; /*키워드*/
+  color: rgb(0, 255, 0); /*r g b 0~255사이 조절. 마우스오버해도 선택가능*/
+  color: #00ff00; /*16진법이라서 ff면 255*/
+  color: rgba(
+    rgba(255, 0, 0, 0.137),
+    rgba(0, 128, 0, 0.219),
+    rgba(0, 0, 255, 0.274),
+    0.4
+  );
+}
+
+html {
+  font-family: Arial, "Franklin Gothic Medium", "Arial Narrow", sans-serif; /*폰트 순차적용. 구글에서 폰트 다운 적용*/
+}

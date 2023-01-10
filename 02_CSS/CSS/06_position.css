@@ -1,0 +1,53 @@
+body {
+  height: 2000px;
+}
+
+.container {
+  border: 3px solid black;
+  height: 300px;
+  position: relative;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+
+  background-color: red;
+
+  /*position 요소의 위치를 잡는 방법을 지정  */
+  position: static; /*기본값. 원래 문서의 흐름대로 위치한다. OFFSET 지정못함*/
+  position: relative; /*원래 문서의 흐름대로 위치한다 OFFSET을 지정하면 자기의 원래 자리를 기준으로 움직인다.*/
+  position: absolute; /*자신의 상위 요소들 중 position값이 static이 아닌 요소를 기준으로 잡는다 절대좌표*/
+
+  /* 바디도 스태틱 제목도 스태틱 */
+  /* 플롯은 높이 인식을 못함 */
+
+  /* OFFSET */
+  right: 10px;
+  top: 10px;
+
+  .box:nth-child(1) {
+    z-index: 1000;
+  }
+}
+.box:nth-last-child(2) {
+  top: 30px;
+  background-color: yellow;
+  /* 가상으로 만들어서 덮어씌운 상황 */
+  z-index: 100;
+}
+
+.box:nth-last-child(3) {
+  top: 60px;
+  background-color: blue;
+}
+
+a {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+
+  /* 포지션이 엡솔룻이거나 플롯되니 상태면 인라인블록(글자로인식)처럼 동작한다 */
+  position: fixed; /*뷰포트를 기준으로 움직인다.*/
+  bottom: 50px;
+}
