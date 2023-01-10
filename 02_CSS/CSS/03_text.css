@@ -28,16 +28,16 @@
 }
 
 .transform h3 {
-  text-transform: capitalize;
+  text-transform: lowercase;
 }
 
 .decoration {
-  text-decoration: 4px coral underline;
+  text-decoration: underline solid black;
   text-decoration-style: dotted; /*선의 종류*/
   text-decoration-color: darkorchid; /*선의 색상*/
   text-decoration-line: overline; /*선의 위치*/
 
-  text: decoration thickness 5px; /*선의 두께. 표준 아님*/
+  text-decoration-thickness: 5px; /*선의 두께. 표준 아님*/
 
   text-decoration: underline 5px;
 
