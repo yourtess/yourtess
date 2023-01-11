@@ -1,3 +1,7 @@
+body {
+    height: 2000px;
+}
+
 .container {
   width: 500px;
   height: 500px;
@@ -9,10 +13,23 @@
   width: 100px;
   height: 100px;
   background-color: red;
-  animation-name: sacele, fadein; /*원하는 애니메이션 이름 지정*/
+  opacity: 0;
+  animation-name: scaleup, fadein; /*원하는 애니메이션 이름 지정*/
   animation-duration: 1s, 1s; /*지속시간*/
-  animation-delay: 0, 1s; /*지연 시간*/
-  animation-timing-function: linear; /*값 변화의 폭*/
+  animation-delay: 0, 2s; /*지연 시간*/
+  animation-timing-function: linear, ease; /*값 변화의 폭*/
+  animation-iteration-count: 2; /*반복 횟수, infinite 혹은 숫자*/
+  animation-direction: alternate; /* 방향 reverse : 시작점 반대로 alternate :종료후 반대로 진행*/
+
+  animation-fill-mode: backwards;
+  /* froword :끝난 후 애니메이션 끝 프레임 상태를 유지
+     backword :딜레이가 있을 때 애니메이션 시작 프레임을 적용 
+    both: 시작, 끝 프레임 유지
+*/
+  animation-fill-mode: both;
+
+  animation: scaleup 1s 1s ease 1 normal both,
+    fadein 1s 1s linear 2 infinite alternate;
 }
 
 /* 애니메이션을 정의
@@ -27,10 +44,9 @@
   }
   70% {
     width: 250px;
-    background-color: aqua;
   }
   100% {
-    width: 200px;
+    width: 500px;
   }
 }
 
@@ -39,8 +55,39 @@
 @keyframes fadein {
   from {
     opacity: 0;
+    background-color: black;
   }
   to {
     opacity: 1;
   }
+}
+/*오른쪽 하단에 동그란 버튼 스크롤되어도 고정되게 밑에서 나타나는 효과*/
+
+.round {
+  width: 50px;
+  height: 50px;
+  border: 3px solid aqua;
+  border-radius: 50%;
+
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  animation: pop 1s, slideup 1s; /*원하는 애니메이션 이름 지정*/
+
+}
+
+@keyframes pop {
+    from{
+        opacity: 0;
+        
+            }
+    to {
+        1;
+    }
+    
+}
+@keyframes slideup{
+    from {
+        transform :translateY(20px)
+    }
 }
