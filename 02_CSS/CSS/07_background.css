@@ -42,7 +42,7 @@ body {
   background-attachment: fixed; /*배경의 첨부 방식*/
 
   background: url(../imege/다운로드.jfif) 0 0 / cover red;
-  /* position/크기/ */
+  /* position위치/크기/(슬래쉬로 꼭 구분) */
 }
 
 /*마우스 올리면 반복되면서 크기는 가로 50px */

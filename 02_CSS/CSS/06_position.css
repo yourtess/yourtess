@@ -47,7 +47,7 @@ a {
   height: 50px;
   border: 1px solid black;
 
-  /* 포지션이 엡솔룻이거나 플롯되니 상태면 인라인블록(글자로인식)처럼 동작한다 */
+  /* 포지션이 absolute이거나 float플롯되니 상태면 inlie-block(스크롤해도 그자리에 버팀.글자로인식)처럼 동작한다 */
   position: fixed; /*뷰포트를 기준으로 움직인다.*/
   bottom: 50px;
 }

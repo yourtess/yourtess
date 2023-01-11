@@ -16,8 +16,9 @@ a {
   float: left;
 
   background-color: red;
-}
-
+  
+/* p태그 클리어 사용할 때는 플롯 아래 */
+/* 에프터 쓸 때는 무조건 컨텐츠 입력 */
 .clearfix::after {
   content: "";
   display: block;
@@ -65,3 +66,4 @@ header {
   text-align: justify;
   float: ;
 }
+/*  */
